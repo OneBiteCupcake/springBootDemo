@@ -40,6 +40,13 @@ public class SpringBootDemoApplication {
 		return builder.build();
 	}
 
+	/**
+	 * consume random quotes about spring boot
+	 * 
+	 * @param restTemplate
+	 * @return
+	 * @throws Exception
+	 */
 	@Bean
 	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
 		return args -> {
@@ -49,6 +56,13 @@ public class SpringBootDemoApplication {
 		};
 	}
 
+	/**
+	 * consume our own rest endpoint
+	 *
+	 * @param restTemplate
+	 * @return
+	 * @throws Exception
+	 */
 	@Bean
 	public CommandLineRunner runGreeting(RestTemplate restTemplate) throws Exception {
 		return args -> {
